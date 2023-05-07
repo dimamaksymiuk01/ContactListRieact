@@ -3,6 +3,7 @@ import './Header.css';
 import {NavLink} from 'react-router-dom'
 function Header() {
     return (
+      <>
         <div className='containerHeader'>
 
 <ul>
@@ -26,6 +27,7 @@ function Header() {
 
             
         </div>
+        </>
     )
   }
   

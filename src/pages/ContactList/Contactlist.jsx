@@ -13,58 +13,69 @@ import Contacts from './contacts';
 
 function Contactlist() {
     return (
-            <div className='block'>
+        <>
 
-                <div className='left'>
-                    <div className='gretys'>
-                        <span>Favorite categories</span>
-                        <img src={star} alt="My Image" />
-                    </div>
-                    <div className='categories'>
-                        <div className='categoriesInfo'>
-                            <img src={myImage1} alt="My Image" />
-                            <span>Work</span>
-                        </div>
-
-                        <div><span>1</span></div>
-                    </div>
-                    <div className='categories'>
-                    <div className='categoriesInfo'>
-                        <img src={myImage2} alt="My Image" />
-                        <span>Family</span>
-                    </div>
-                    <div><span>3</span></div>
-                    </div>
-                    <div className='categories'>
-                    <div className='categoriesInfo'>
-                        <img src={myImage3} alt="My Image" />
-                        <span>Friends</span>
-                        </div>
-                        <div><span>8</span></div>
-
-                    </div>
-                    <div className='categories'>
-                    <div className='categoriesInfo'>
-                    <img src={myImage4} alt="My Image" />
-                        <span>Private</span>
-                    </div>
-                    <div><span>0</span></div>
-                    </div>
-                </div>
+<div className='search'>
+<div className='form__group'>
+<input type="text" className='form__input' id="name" placeholder="Contact name" required="" />
+<label for="name" className='form__label' id="cityLabel">Enter name</label>
+</div>
+</div>
 
 
+<div className='block'>
+<div className='left'>
+    <div className='gretys'>
+        <span>Favorite categories</span>
+        <img src={star} alt="My Image" />
+    </div>
+    <div className='categories'>
+        <div className='categoriesInfo'>
+            <img src={myImage1} alt="My Image" />
+            <span>Work</span>
+        </div>
 
-                <div className='right'>
+        <div><span>1</span></div>
+    </div>
+    <div className='categories'>
+    <div className='categoriesInfo'>
+        <img src={myImage2} alt="My Image" />
+        <span>Family</span>
+    </div>
+    <div><span>3</span></div>
+    </div>
+    <div className='categories'>
+    <div className='categoriesInfo'>
+        <img src={myImage3} alt="My Image" />
+        <span>Friends</span>
+        </div>
+        <div><span>8</span></div>
 
-                    <div className='gretys'>
-                        <img src={contacts} alt="My Image" />
-                        <span>Your contacts</span>
-                    </div>
+    </div>
+    <div className='categories'>
+    <div className='categoriesInfo'>
+    <img src={myImage4} alt="My Image" />
+        <span>Private</span>
+    </div>
+    <div><span>0</span></div>
+    </div>
+</div>
 
-                    <Contacts/>
 
-                </div>
-            </div>
+
+<div className='right'>
+
+    <div className='gretys'>
+        <img src={contacts} alt="My Image" />
+        <span>Your contacts</span>
+    </div>
+
+    <Contacts/>
+
+</div>
+</div>
+        </>
+
         )
       }
       

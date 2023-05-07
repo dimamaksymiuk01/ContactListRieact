@@ -37,36 +37,35 @@ function Newcontact() {
         <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={handleSubmit} >
             {({isSubmitting}) => (
                 <Form>
-                        <div>
-                            <label htmlFor='name'>Name
-                            <Field type='text' name='name' />
-                            <ErrorMessage name='name'/>
-                            </label>
+                    <div className='addInfoNew'>
+                        <div className='addInfo'>
+                            <div className='lb'><label htmlFor='name'>Name</label></div>
+                            <div className='tx'><Field type='text' name='name' /></div>
+                            <div className='err'><ErrorMessage name='name'/></div> 
                         </div>
 
-                        <div>
-                            <label htmlFor='phone'>Phone
-                            <Field type='text' name='phone' />
-                            <ErrorMessage name='phone'/>
-                            </label>
+                        <div className='addInfoNew'>
+                        <div className='lb'><label htmlFor='phone'>Phone</label></div>
+                        <div className='tx'><Field type='text' name='phone' /></div>
+                        <div className='err'><ErrorMessage name='phone'/></div>
+                            
+                            
                         </div>
 
-                        <div>
-                            <label htmlFor='email'>Email
-                            <Field type='text' name='email' />
-                            <ErrorMessage name='email'/>
-                            </label>
+                        <div className='addInfoNew'>
+                        <div className='lb'><label htmlFor='email'>Email</label></div>
+                        <div className='tx'><Field type='text' name='email' /></div>
+                        <div className='err'><ErrorMessage name='email'/></div> 
                         </div>
 
-                        <div>
-                            <label htmlFor='avatar'>Avatar
-                            <Field type='file' name='avatar' />
-                            <ErrorMessage name='avatar'/>
-                            </label>
+                        <div className='addInfoNew'>
+                        <div className='lb'><label htmlFor='avatar'>Avatar</label></div>
+                        <div className='tx'><Field type='file' className='custom-file-input' name='avatar' /></div>
+                        <div className='err'><ErrorMessage name='avatar'/></div>
                         </div>
 
-                        <div>
-                            <label htmlFor='gender'>Gender
+                        <div className='addInfoNew'>
+                            <label htmlFor='gender'>Gender:
                             <Field as='select' name='gender'>
                                 <option value=''>Choose gender</option>
                                 <option value='Men'>Men</option>
@@ -76,8 +75,8 @@ function Newcontact() {
                             </label>
                         </div>
 
-                        <div>
-                            <label htmlFor='status'>Status
+                        <div className='addInfoNew'>
+                            <label htmlFor='status'>Status:
                             <Field as='select' name='status'>
                                 <option value=''>Choose status</option>
                                 <option value='Work'>Work</option>
@@ -91,8 +90,12 @@ function Newcontact() {
                             </label>
                         </div>
 
-                    <button type='submit' className='btn' disabled={isSubmitting} >Add contact</button>
+                        <div className='check'>
+                            <div><label htmlFor='status'>Favorite</label></div>
+                            <div><Field type='checkbox' className='checkbox' name='favorite'/></div>
+                        </div>
 
+                    <button type='submit' className='bubbly-button' disabled={isSubmitting} >Add contact</button></div>
                 </Form>
             )}
         </Formik>
