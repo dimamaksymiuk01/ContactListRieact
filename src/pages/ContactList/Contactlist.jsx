@@ -17,9 +17,10 @@ function Contactlist() {
 
 <div className='search'>
 <div className='form__group'>
-<input type="text" className='form__input' id="name" placeholder="Contact name" required="" />
-<label for="name" className='form__label' id="cityLabel">Enter name</label>
+  <input type="text" className='form__input' id="name" placeholder="Contact name" required="" />
+  <label htmlFor="name" className='form__label' id="cityLabel">Enter name</label>
 </div>
+
 </div>
 
 
